@@ -1,6 +1,9 @@
 {
   "name": "notes",
   "version": "0.0.0",
+  "eslintConfig": {
+    "extends": ["serverless-stack"]
+  },
   "private": true,
   "type": "module",
   "scripts": {
@@ -12,13 +15,17 @@
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
-    "sst": "^2.7.2",
+    "@tsconfig/node16": "^1.0.3",
     "aws-cdk-lib": "2.72.1",
     "constructs": "10.1.156",
-    "typescript": "^5.0.4",
-    "@tsconfig/node16": "^1.0.3"
+    "sst": "^2.7.2",
+    "typescript": "^5.0.4"
   },
   "workspaces": [
     "packages/*"
-  ]
+  ],
+  "dependencies": {
+    "aws-sdk": "^2.1370.0",
+    "uuid": "^9.0.0"
+  }
 }
